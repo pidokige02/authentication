@@ -46,6 +46,9 @@ const router = new VueRouter({
   routes,
 });
 
+// to : the route being navigated to
+// from: the current route being navigated away from
+// next the function called to resolve the hook
 router.beforeEach((to, from, next) => {
   const loggedIn = localStorage.getItem("user");
 
