@@ -27,7 +27,7 @@
 export default {
   data() {
     return {
-      name: "",
+      username: "", 
       email: "",
       password: "",
       errors: null,

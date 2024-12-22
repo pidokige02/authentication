@@ -1,8 +1,8 @@
 <template>
   <div>
     <form @submit.prevent="login">
-      <label for="email"> Email: </label>
-      <input v-model="email" type="email" name="email" value />
+      <label for="username"> UserName: </label>
+      <input v-model="username" type="text" name="username" value />
 
       <label for="password"> Password: </label>
       <input v-model="password" type="password" name="password" value />
@@ -22,7 +22,7 @@
 export default {
   data() {
     return {
-      email: "",
+      username: "",
       password: "",
       error: null,
     };
@@ -31,7 +31,7 @@ export default {
     login() {
       this.$store
         .dispatch("login", {
-          email: this.email,
+          username: this.username,
           password: this.password,
         })
         .then(() => {
