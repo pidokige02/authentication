@@ -4,6 +4,9 @@ import Home from "../views/Home.vue";
 import Dashboard from "../views/Dashboard.vue";
 import RegisterUser from "../views/RegisterUser.vue";
 import LoginUser from "../views/LoginUser.vue";
+import PostDetails from "../views/PostDetails.vue";
+import PostCreate from "../views/PostCreate.vue";
+
 
 Vue.use(VueRouter);
 
@@ -18,6 +21,16 @@ const routes = [
     name: "dashboard",
     component: Dashboard,
     meta: { requiresAuth: true },
+  },
+  {
+    path: "/post/:id",
+    name: "PostDetails",
+    component: PostDetails,
+  },
+  {
+    path: "/create",
+    name: "PostCreate",
+    component: PostCreate,
   },
   {
     path: "/register",
