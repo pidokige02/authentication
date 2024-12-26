@@ -64,7 +64,6 @@ export default {
           this.next = data.next || null; // 다음 페이지 번호
           this.previous = data.previous || null; // 이전 페이지 번호
           this.currentPage = data.current || 1; // 현재 페이지
-          console.log("Jinha", data.current);
           this.totalPages = data.total_pages || 1; // 전체 페이지 수
         })
         .catch((error) => {
