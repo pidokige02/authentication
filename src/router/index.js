@@ -6,7 +6,7 @@ import RegisterUser from "../views/RegisterUser.vue";
 import LoginUser from "../views/LoginUser.vue";
 import PostDetails from "../views/PostDetails.vue";
 import PostCreate from "../views/PostCreate.vue";
-
+import PostUpdate from "../views/PostUpdate.vue";
 
 Vue.use(VueRouter);
 
@@ -26,6 +26,11 @@ const routes = [
     path: "/post/:id",
     name: "PostDetails",
     component: PostDetails,
+  },
+  {
+    path: "/update/:id",
+    name: "PostUpdate",
+    component: PostUpdate,
   },
   {
     path: "/create",
