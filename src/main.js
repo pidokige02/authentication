@@ -9,7 +9,7 @@ Vue.config.productionTip = false;
 new Vue({
   router,
   store,
-  created () {
+  created() {
     const userString = localStorage.getItem("user"); // grab user data from local storage
     if (userString) {
       // check to see if there is indeed a user
@@ -25,7 +25,7 @@ new Vue({
         }
         return Promise.reject(error); // reject the Promise, with the error as the reason
       }
-    )
+    );
   },
   render: (h) => h(App),
 }).$mount("#app");
