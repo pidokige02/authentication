@@ -29,6 +29,7 @@ export default new Vuex.Store({
   },
   actions: {
     register({ commit }, credentials) {
+      console.log("Jinha", credentials);
       return axios
         .post("//localhost:8000/api/v1/users/", credentials)
         .then(({ data }) => {

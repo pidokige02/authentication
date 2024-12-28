@@ -2,7 +2,7 @@
   <div>
     <form @submit.prevent="register">
       <label for="name"> Name: </label>
-      <input v-model="name" type="text" name="name" value />
+      <input v-model="username" type="text" name="name" value />
 
       <label for="email"> Email: </label>
       <input v-model="email" type="email" name="email" value />
@@ -37,12 +37,12 @@ export default {
     register() {
       this.$store
         .dispatch("register", {
-          name: this.name,
+          username: this.username,
           email: this.email,
           password: this.password,
         })
         .then(() => {
-          this.$router.push({ name: "dashboard" });
+          this.$router.push({ name: "Home" });
         })
         .catch((err) => {
           this.errors = err.response.data.errors;
